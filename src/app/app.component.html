@@ -86,9 +86,23 @@
         }
 
     </div>
-    <div style="display: flex; gap: 10px;">
+    <div style="display: flex; gap: 10px; justify-content: center;">
         <button (click)="addProf()">Aggiungi Professore</button>
         <button (click)="updateProf()">Modifica Professore</button>
         <button (click)="randomOrder()">Mescola</button>
     </div>
+
+    <div>----------------------------------------------------------------</div>
+
+    <section style="margin-top: 25px;">
+        <h2>NG MODEL</h2>
+        <p>Collega il valore di un campo Input a un Signal attraverso la direttiva ngModel</p>
+        <div>
+            <div style="display: flex; gap: 10px;">
+                <input type="text" [(ngModel)]="text">
+                Text: {{text()}}
+            </div>
+        </div>
+
+    </section>
 </section>

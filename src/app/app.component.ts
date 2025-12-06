@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { sign } from 'node:crypto';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -72,4 +73,7 @@ export class AppComponent {
     randomOrder() {
         this.professors.update(p => p.sort(() => Math.random() - 0.5))
     }
+
+    // --------------------------------------------------------------------
+    text = signal('')
 }
