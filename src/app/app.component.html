@@ -71,7 +71,13 @@
         @for (p of professors(); track p.id) {
             <div class="student">
                 <div>
-                    Professore {{ p.id }}: {{ p.nome }} - materia: {{ p.materia }}
+                    <b>Professore {{ p.id }}:</b> 
+                    <div>
+                        {{ p.nome }}
+                    </div>
+                    <div>
+                        materia: {{ p.materia }}
+                    </div>
                 </div>
                 <div>
                     Totale professori: {{$index + 1}} / {{$count}} 
@@ -79,6 +85,9 @@
             </div>
         }
 
-        
+    </div>
+    <div style="display: flex; gap: 10px;">
+        <button (click)="addProf()">Aggiungi Professore</button>
+        <button (click)="updateProf()">Modifica Professore</button>
     </div>
 </section>

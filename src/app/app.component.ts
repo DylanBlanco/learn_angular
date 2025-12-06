@@ -44,4 +44,28 @@ export class AppComponent {
         {id: 2, nome: 'Prof.ssa Rossi', materia: 'Italiano'},
         {id: 3, nome: 'Prof. Verdi', materia: 'Inglese'}
     ])
+
+    addProf() {
+        const idProf = this.professors().length + 1;
+        const newProf = {
+            id: idProf,
+            nome: 'Nuovo Prof ' + idProf,
+            materia: 'Nuova Materia ' + idProf
+        };
+        this.professors.update(profs => [...profs, newProf]);
+    }
+
+    updateProf() {
+        this.professors.update(p => p.map(prof => {
+            if (prof.id % 2 === 0) {
+                return {
+                    ...prof,
+                    nome: prof.nome + ' (Aggiornato)'
+                }
+            }
+            else {
+                return prof;
+            }
+        }))
+    }
 }
