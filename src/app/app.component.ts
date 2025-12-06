@@ -56,7 +56,7 @@ export class AppComponent {
     }
 
     updateProf() {
-        this.professors.update(p => p.map(prof => {
+        this.professors.update(p => p.map(prof => {  // UPDATE ammette una funzione che riceve il valore corrente
             if (prof.id % 2 === 0) {
                 return {
                     ...prof,
@@ -67,5 +67,9 @@ export class AppComponent {
                 return prof;
             }
         }))
+    }
+
+    randomOrder() {
+        this.professors.update(p => p.sort(() => Math.random() - 0.5))
     }
 }
