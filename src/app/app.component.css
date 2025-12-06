@@ -1,0 +1,16 @@
+.card-students {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.student {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    width: 150px;
+    background-color: #eee;
+}
