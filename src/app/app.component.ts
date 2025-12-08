@@ -80,8 +80,9 @@ export class AppComponent {
     text2 = signal('')
 
     setText2(e: Event) {
-        if(e.target instanceof HTMLInputElement) {
-            this.text2.set(e.target.value)
-        }
+        // if(e.target instanceof HTMLInputElement) {
+        //     this.text2.set(e.target.value)
+        // }
+        this.text2.set((e.target as HTMLInputElement).value)
     }
 }
