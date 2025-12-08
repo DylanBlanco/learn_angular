@@ -108,5 +108,23 @@
                 </div>
             </div>
         </div>
+
+    </section>
+
+    <div>---------------------------------------</div>
+
+    <section style="margin-top: 25px;">
+        <p>
+            Modalità alternativa che non sfrutta la direttiva ngModel, <br>
+            Ma il setting dell'attributo value e l'impostazione di un gestiore di eventi per l'evento input
+        </p>
+        <div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div>
+                    <input type="text" [value]="text2()" (input)="setText2($event)">  <!-- leghiamo il valore dell'input al signal [value]="text2() -->
+                    Text: <b>{{text2()}}</b>
+                </div>
+            </div>
+        </div>
     </section>
 </section>

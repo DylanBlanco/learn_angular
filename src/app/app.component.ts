@@ -77,4 +77,11 @@ export class AppComponent {
     // --------------------------------------------------------------------
     text = signal('')  // campo vuoto che assumerà il valore dell'input e importiamo FormsModule
 
+    text2 = signal('')
+
+    setText2(e: Event) {
+        if(e.target instanceof HTMLInputElement) {
+            this.text2.set(e.target.value)
+        }
+    }
 }
