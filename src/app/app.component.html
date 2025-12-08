@@ -96,13 +96,17 @@
 
     <section style="margin-top: 25px;">
         <h2>NG MODEL</h2>
-        <p>Collega il valore di un campo Input a un Signal attraverso la direttiva ngModel</p>
+        <p>Collega il valore di un campo Input a un valore di stato(quindi a un Signal) attraverso la direttiva ngModel</p>
         <div>
-            <div style="display: flex; gap: 10px;">
-                <input type="text" [(ngModel)]="text">
-                Text: {{text()}}
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div>
+                    <p>creiamo un input e all'interno la direttiva [(ngModel)] alla quale assegnamo un valore (Signal)</p>
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="text">
+                    Text: <b>{{text()}}</b>
+                </div>
             </div>
         </div>
-
     </section>
 </section>

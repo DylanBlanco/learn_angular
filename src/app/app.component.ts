@@ -75,5 +75,6 @@ export class AppComponent {
     }
 
     // --------------------------------------------------------------------
-    text = signal('')
+    text = signal('')  // campo vuoto che assumerà il valore dell'input e importiamo FormsModule
+
 }
