@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { sign } from 'node:crypto';
@@ -92,5 +92,14 @@ export class AppComponent {
 
     incrCounter3() {
         this.counter3.update(v => v + 1);
+    }
+
+    //  --------------------------------------------------------------------
+
+    counter4 = signal(0)
+    doubleCounter = computed(() => this.counter4() * 2)
+
+    incrCounter4() {
+        this.counter4.update(v => v + 1);
     }
 }

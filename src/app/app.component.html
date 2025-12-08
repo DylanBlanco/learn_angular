@@ -141,4 +141,15 @@
             <button (click)=incrCounter3()>Increment</button>
         </div>
     </section>
+
+    <section>
+        <h2>Computed Signals</h2>
+        <p>Segnale Reattivo il cui valore è derivato automaticamente da altri segnali dipendenti</p>
+
+        <div [title]="'Counter: ' + counter4()">  <!--  Title reattivo (stringa + valore del signal) -->
+            Counter4: {{ counter4() }}
+            <div>DoubleCounter: {{ doubleCounter() }}</div>
+            <button (click)=incrCounter4()>Increment</button>
+        </div>
+    </section>
 </section>
