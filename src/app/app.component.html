@@ -27,7 +27,8 @@
     }
 }
 
-<div>----------------------------------------------------------------</div>
+<hr>
+
 <h2>Iterzione con for: Array Students</h2>
 <div class="card-students">
     @for (s of students; track s.id) {
@@ -42,7 +43,8 @@
     }
 </div>
 
-<div>----------------------------------------------------------------</div>
+<hr>
+
 <section>
     <h2>SIGNALS:</h2>
     <div>
@@ -64,7 +66,7 @@
         }
     </div>
 
-    <div>----------------------------------------------------------------</div>
+    <hr>
 
     <h2>Array Professors</h2>
     <div class="card-students">
@@ -92,7 +94,7 @@
         <button (click)="randomOrder()">Mescola</button>
     </div>
 
-    <div>----------------------------------------------------------------</div>
+    <hr>
 
     <section style="margin-top: 25px;">
         <h2>NG MODEL</h2>
@@ -111,7 +113,7 @@
 
     </section>
 
-    <div>---------------------------------------</div>
+    <div>-------------------------------------------------------------------</div>
 
     <section style="margin-top: 25px;">
         <p>
@@ -125,6 +127,18 @@
                     Text: <b>{{text2()}}</b>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Title Reattivo</h2>
+        <p>Legare u valore HTMl a un avlore che proviene dalla logica del componente(Signal)</p>
+
+        <div [title]="'Counter3: ' + counter3()">  <!--  Title reattivo (stringa + valore del signal) -->
+            Counter3: {{ counter3() }}
+            <button (click)=incrCounter3()>Increment</button>
         </div>
     </section>
 </section>

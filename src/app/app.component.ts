@@ -85,4 +85,12 @@ export class AppComponent {
         // }
         this.text2.set((e.target as HTMLInputElement).value)
     }
+
+    //  --------------------------------------------------------------------
+
+    counter3 = signal(10)
+
+    incrCounter3() {
+        this.counter3.update(v => v + 1);
+    }
 }
